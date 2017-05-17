@@ -32,11 +32,11 @@
                 </th>
             </tr>
             <tbody>
-                <tr ng-animate="'animate'" ng-repeat="todo in todos | filter:search | orderBy:sort.field : sort.order" class="light-gray-buttom-border cursor-pointer" ng-click="editTodo(todo.tid)">
+                <tr ng-animate="'animate'" ng-repeat="todo in todos | filter:search | orderBy:sort.field : sort.order" class="light-gray-buttom-border cursor-pointer" >
                     <td ><input type="checkbox" class="id-holder" value="{{todo.tid}}"></td>
-                    <td>{{todo.title}}</td>
-                    <td>{{todo.detail}}</td>
-                    <td>{{todo.status}}</td>
+                    <td ng-click="editTodo(todo.tid)">{{todo.title}}</td>
+                    <td ng-click="editTodo(todo.tid)">{{todo.detail}}</td>
+                    <td ng-click="editTodo(todo.tid)">{{todo.status}}</td>
                 </tr>
             </tbody>
         </table>
