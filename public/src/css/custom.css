@@ -1,0 +1,61 @@
+.nav-tabs>li>a {
+    color: #044d81;
+    font-weight: bold;
+}
+.nav-tabs > .right-float{
+    float: right;;
+}
+.nav-tabs > .right-float > .gray-color{
+    color: gray;
+}
+
+/* enable absolute positioning */
+.inner-addon {
+    position: relative;
+}
+
+/* style icon */
+.inner-addon .glyphicon {
+    position: absolute;
+    padding: 10px;
+    pointer-events: none;
+}
+
+/* align icon */
+.left-addon .glyphicon  { left:  0px;}
+.right-addon .glyphicon { right: 0px;}
+
+/* add padding  */
+.left-addon input  {
+    padding-left:  30px;
+    height:35px;
+}
+.right-addon input { padding-right: 30px; }
+.option-sort-by{
+    padding-top: 0px;
+    padding-bottom: 0px;
+    height: 35px;
+}
+.option-role{
+    background: transparent;
+    border: none;
+    -webkit-appearance: none;
+    appearance:none;
+    -moz-appearance:none;
+    cursor: pointer;
+    outline: none;
+    min-height: 20px;
+}
+.table>tbody>tr> .middle-align{
+    vertical-align: middle;
+}
+div .inner-addon .all-pointer-events{
+    pointer-events: all;
+}
+#add-todo-tablle tr td:nth-child(1){
+    text-align: right;
+}
+#todo-list td{
+    font-size: 20px;
+    cursor: pointer;
+}

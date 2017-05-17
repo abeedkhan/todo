@@ -1,0 +1,53 @@
+<br>
+<div class="row">
+    <div class="col-sm-3 right-align middle-aligtn">
+        <label class="outer-gap-top-5">Email :</label>
+    </div>
+    <div class="col-sm-7 col-sm-offset-1">
+        <div class="inner-addon right-addon">
+            <i class="glyphicon glyphicon-user font-25 light-gray"></i>
+            <input ng-model="email"
+                   name="email"
+                   type="text"
+                   class="form-control log-in-email"
+                   ng-keyup="emailValidate()"
+                   placeholder="Write Your Email Id">
+        </div>
+        <span class="text-danger">{{emailWarning}}</span>
+    </div>
+    <div class="col-sm-1 hidden-xs">
+        <span id="email-warning" class="glyphicon glyphicon-remove-circle font-30 outer-gap-top-5 text-danger hidden"></span>
+        <span id="email-correct" class="glyphicon glyphicon-ok-circle font-30 outer-gap-top-5 text-success hidden"></span>
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="col-sm-3 right-align middle-aligtn">
+        <label>Password :</label>
+    </div>
+    <div class="col-sm-7 col-sm-offset-1">
+        <div class="inner-addon right-addon">
+            <i class="glyphicon glyphicon-eye-{{toggleEye}} font-25 light-gray all-pointer-events pointer-cursor"
+               ng-click="toggleVisibility()"></i>
+            <input
+                    ng-model="password"
+                    name="password"
+                    type="password"
+                    class="form-control log-in-password"
+                    ng-keyup="passwordValidate()"
+                    placeholder="Write Your Password">
+        </div>
+        <span class="text-danger">{{passwordWorning}}</span>
+    </div>
+    <div class="col-sm-1 hidden-xs">
+        <span id="password-warning" class="glyphicon glyphicon-remove-circle font-30 outer-gap-top-5 text-danger hidden"></span>
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="col-sm-4 col-sm-offset-7">
+        <button ng-click="submit()" class="btn btn-default btn-block" >
+            Log In
+            <span class="glyphicon glyphicon-log-in"></span> </button>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="col-sm-1">
+    Sort By
+</div>
+<div class="col-sm-5">
+    <select class="form-control option-sort-by" ng-model="$parent.userOrder">
+        <option
+                ng-repeat="field in fieldsForSorting"
+                value="{{field}}"
+        >
+            {{field | labelCase}}
+        </option>
+    </select>
+</div>
+<div class="col-sm-offset-3 col-sm-3">
+    <div class="inner-addon left-addon">
+        <i class="glyphicon glyphicon-search"></i>
+        <input type="text"
+               class="form-control"
+               placeholder="Find by name or email"
+               ng-model="$parent.query"
+        />
+    </div>
+</div>

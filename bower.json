@@ -1,0 +1,33 @@
+{
+  "name": "Tidi",
+  "description": "to-do list",
+  "main": "app.js",
+  "authors": [
+    "abid khan"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "administratio",
+    "user",
+    "management",
+    "to-do"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-route": "^1.5.8",
+    "angular-resource": "^1.5.5",
+    "bootstrap": "^3.3.7",
+    "underscore": "^1.8.3",
+    "angular": "^1.5.8",
+    "angular-animate": "^1.5.8",
+    "bootbox.js": "bootbox#^4.4.0"
+  }
+}

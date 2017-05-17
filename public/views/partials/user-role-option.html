@@ -1,0 +1,7 @@
+<select class="option-role" data-user-id="{{user.uid}}"
+        onchange="angular.element(this).scope().userRoleUpdate(this.value , this.dataset.userId)">
+    <option ng-selected="{{role == user.role}}" ng-repeat="role in roles" value="{{role}}">
+        {{role}}
+    </option>
+</select>
+<span class="glyphicon glyphicon-option-vertical"></span>

@@ -1,0 +1,25 @@
+<div class="row visible-xs">
+    <div class="col-sm-12 text-center">
+        <br/>
+        <button class="btn btn-default bottom-gap-5" ng-click="logOutCurrent()">Log Out <span class="glyphicon glyphicon-log-out"></span></button>
+        &nbsp;
+        <button class="btn btn-default" ng-click="logOutAll()">Log Out All Other Devices <span class="glyphicon glyphicon-new-window"></span> </button>
+    </div>
+</div>
+<br>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">To do app</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="{{todoActive}}" ng-click="goTo('toDo')"><a href="#">To-Do List</a></li>
+            <li class="{{userActive}}" ng-click="goTo('user')"><a href="#">User List</a></li>
+        </ul>
+        <ul class="nav navbar-nav right-float-for-large hidden-xs">
+            <li ng-click="logOutCurrent()"><a href="#"><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>
+            <li  ng-click="logOutAll()"><a href="#"> <span class="glyphicon glyphicon-new-window"></span> Log Out All Other Devices</a></li>
+        </ul>
+    </div>
+</nav>
+<span id="notice-from-header"></span>

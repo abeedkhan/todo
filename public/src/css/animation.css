@@ -1,0 +1,33 @@
+#todo-list tbody .cursor-pointer , #user-list table tr{
+    opacity: .9;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+#todo-list tbody .cursor-pointer:hover ,#user-list table tr:hover{
+    opacity: 1;
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+}
+#todo-list tbody tr.ng-enter.ng-enter-active ,
+#user-list table tr.ng-enter.ng-enter-active,
+#todo-list tbody tr.ng-leave ,
+#user-list table tr.ng-leave{
+    opacity: 1;
+    height: 81px;
+    overflow: hidden;
+}
+#user-list table tr.ng-enter.ng-leave-active,
+#user-list table tr.ng-enter{
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+}
+#user-list table{
+    border-bottom: 1px solid gainsboro;
+}

@@ -1,0 +1,44 @@
+<header ng-include src="'views/partials/header.html'"></header>
+<div >
+    <br />
+    <input type="text" class="form-control" ng-model="search" placeholder="Search By Title , Detail or Sstatus">
+    <br />
+    <div class="right-align-for-large text-center-for-min">
+        <button class="btn btn-default bottom-gap-5" ng-click="addToDo()"><span class="glyphicon glyphicon-plus"></span> Add Todo</button>
+        <button class="btn btn-default bottom-gap-5" ng-click="deleteSelected()"><span class="glyphicon glyphicon-th-list"></span> Delete Selected</button>
+        <button class="btn btn-danger bottom-gap-5" ng-click="deleteAllTodos()"><span class="glyphicon glyphicon-trash"></span> Delete All</button>
+    </div>
+    <div>
+        <div>
+
+        </div>
+        <table id="todo-list" class="table table-hover width100p">
+            <tr>
+                <th></th>
+                <th class="pointer-cursor" ng-click="sort('title')">
+                    <span>Title &nbsp;</span>
+                    <span ng-show="sort.field == 'title' && !sort.order" class="glyphicon glyphicon-chevron-down"></span>
+                    <span ng-show="sort.field == 'title' && sort.order" class="glyphicon glyphicon-chevron-up"></span>
+                </th>
+                <th class="pointer-cursor" ng-click="sort('detail')">
+                    <span>Detail &nbsp;</span>
+                    <span ng-show="sort.field == 'detail' && !sort.order" class="glyphicon glyphicon-chevron-down"></span>
+                    <span ng-show="sort.field == 'detail' && sort.order" class="glyphicon glyphicon-chevron-up"></span>
+                </th>
+                <th class="pointer-cursor" ng-click="sort('status')">
+                    <span ng-click="sort('status')">Status &nbsp;</span>
+                    <span ng-show="sort.field == 'status' && !sort.order" class="glyphicon glyphicon-chevron-down"></span>
+                    <span ng-show="sort.field == 'status' && sort.order" class="glyphicon glyphicon-chevron-up"></span>
+                </th>
+            </tr>
+            <tbody>
+                <tr ng-animate="'animate'" ng-repeat="todo in todos | filter:search | orderBy:sort.field : sort.order" class="light-gray-buttom-border cursor-pointer" ng-click="editTodo(todo.tid)">
+                    <td ><input type="checkbox" class="id-holder" value="{{todo.tid}}"></td>
+                    <td>{{todo.title}}</td>
+                    <td>{{todo.detail}}</td>
+                    <td>{{todo.status}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+<header ng-include src="'views/partials/header.html'"></header>
+<div>
+    <ul class="nav nav-tabs" role="tablist" id="user-types">
+        <li role="presentation" class="active"><a href="#all" aria-controls="all" role="tab" data-toggle="tab">
+            All Members {{users.length ? '('+users.length+')' : ''}}
+        </a></li>
+        <li role="presentation"><a href="#registered" aria-controls="registered" role="registered" data-toggle="tab">
+            Registered {{users.registered.length ? '('+users.registered.length+')' : ''}}
+        </a></li>
+        <li role="presentation"><a href="#invited" aria-controls="invited" role="tab" data-toggle="tab">
+            Invited {{users.invited.length ? '('+users.invited.length+')' : ''}}
+        </a></li>
+        <li class="right-float" role="presentation"><a class="gray-color" href="#disabled" aria-controls="disabled" role="tab" data-toggle="tab">
+            Disabled {{users.disabled.length ? '('+users.disabled.length+')' : ''}}
+        </a></li>
+    </ul>
+    <div class="tab-content" id="user-list">
+        <div role="tabpanel" class="tab-pane fade in active container-fluid" id="all" ng-include src="'views/users-by-status/all.html'"></div>
+        <div role="tabpanel" class="tab-pane fade" id="registered" ng-include src="'views/users-by-status/registered.html'"></div>
+        <div role="tabpanel" class="tab-pane fade" id="invited" ng-include src="'views/users-by-status/invited.html'"></div>
+        <div role="tabpanel" class="tab-pane fade" id="disabled" ng-include src="'views/users-by-status/disabled.html'"></div>
+    </div>
+</div>
+<script src="src/js/tabed-content.jquery.js"></script>
